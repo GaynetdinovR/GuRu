@@ -1,0 +1,32 @@
+@import "../variables"
+@import "../mixins"
+
+//<1440px
+@media screen and (max-width: $laptop_large)
+  .benefits__item
+      padding: 15px 10px
+
+//<1280px
+@media screen and (max-width: $laptop_medium)
+//<1024px
+@media screen and (max-width: $laptop_small)
+  .benefits__list
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: 1fr 1fr
+
+//<960px
+@media screen and (max-width: $tablet_large)
+//<768px
+@media screen and (max-width: $tablet_medium)
+//<640px
+@media screen and (max-width: $tablet_small)
+  .benefits__list
+    grid-template-columns: 1fr
+    grid-template-rows: 1fr 1fr 1fr 1fr
+
+//<540px
+@media screen and (max-width: $phone_large)
+//<480px
+@media screen and (max-width: $phone_medium)
+//<320px
+@media screen and (max-width: $phone_small)

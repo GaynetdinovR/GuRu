@@ -1,0 +1,34 @@
+@import "../variables"
+@import "../mixins"
+
+//<1440px
+@media screen and (max-width: $laptop_large)
+//<1280px
+@media screen and (max-width: $laptop_medium)
+//<1024px
+@media screen and (max-width: $laptop_small)
+  .header
+    padding: 40px
+
+//<960px
+@media screen and (max-width: $tablet_large)
+//<768px
+@media screen and (max-width: $tablet_medium)
+  .header__logo a
+    font-size: 26px
+  .header__right_container
+    justify-content: end
+    width: initial
+//<640px
+@media screen and (max-width: $tablet_small)
+
+//<540px
+@media screen and (max-width: $phone_large)
+  .header__logo a
+    font-size: 22px
+  .header
+    padding: 30px
+//<480px
+@media screen and (max-width: $phone_medium)
+//<320px
+@media screen and (max-width: $phone_small)

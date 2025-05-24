@@ -1,0 +1,38 @@
+@import "../mixins"
+@import "../variables"
+
+.header
+  box-sizing: border-box
+  padding: 40px 120px
+  margin-top: 10px
+  border: rgba($gray, 0.2) 2px solid
+  border-radius: 20px
+
+  @include font()
+  @include flex($jc: space-between, $ai: center)
+
+  &__logo
+    a
+      text-decoration: none
+      @include font($s: 32px, $w: 800, $c: $black)
+      @include link_hover()
+
+  &__right_container
+    width: 350px
+    @include flex($jc: space-between, $ai: center)
+
+  &__phone_number
+    @include flex($d: column, $ai: end)
+    & div
+      margin-bottom: 2px
+      font-size: 12px
+      color: $gray
+    & a
+      color: $black
+      text-decoration: underline
+      font-weight: 600
+      @include link_hover()
+
+  &__button
+
+@import '../media/Header.media.sass'

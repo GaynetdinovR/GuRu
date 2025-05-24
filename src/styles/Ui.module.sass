@@ -1,0 +1,41 @@
+@import "variables"
+@import "mixins"
+
+.error_container
+  box-sizing: border-box
+  max-width: 1440px
+  padding: 40px 120px
+
+  @include flex($jc: center, $ai: center, $d: column)
+
+.base_button
+  padding: 10px 20px
+  border-radius: 5px
+  border: none
+  background-color: $purple
+
+  @include font($s: 14px, $c: $white)
+  @include btn_hover()
+
+.text
+  @include font($s: 18px, $c: $gray)
+
+.h1
+  @include font($s: 42px, $c: $black, $w: 700, $lh: 1.8)
+
+.h2
+  @include font($s: 36px, $c: $black, $w: 700, $lh: 1.8)
+
+.h3
+  @include font($s: 30px, $c: $black, $w: 700, $lh: 1.8)
+
+.h4
+  @include font($s: 24px, $c: $black, $w: 700, $lh: 1.8)
+
+.h5
+  @include font($s: 20px, $c: $black, $w: 700, $lh: 1.8)
+
+.h6
+  @include font($s: 18px, $c: $black, $w: 600, $lh: 1.8)
+
+@import './Ui.media.sass'

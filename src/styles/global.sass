@@ -1,0 +1,70 @@
+@import "reset.sass"
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap')
+
+@import "variables.sass"
+@import "mixins.sass"
+
+main, header, footer
+  max-width: 1440px
+  margin: 0 auto
+  width: 100%
+
+main, footer
+  margin-top: 20px
+
+main
+  flex: 1
+
+body
+  padding: 0 20px
+
+#root
+    min-height: 100vh
+    width: 100%
+    display: flex
+    flex-direction: column
+
+.based_notification
+  width: 400px
+  @include font()
+
+//! КОСТЫЛЬ
+.sn-notifications-container
+  box-sizing: border-box
+//!!
+
+.based_container
+  font-family: 'Montserrat', sans-serif
+  font-size: 17px
+  line-height: 1.2
+  font-weight: 500
+  padding: 40px 120px
+
+.based_h4 b
+  font-weight: 600
+
+.based_h4
+  font-size: 20px
+  line-height: 1.8
+
+.based_h2
+  font-size: 32px
+  font-weight: 700
+  line-height: 2.2
+
+.based_list
+  list-style-type: disc
+  padding-left: 20px
+
+.based_list li
+  margin: 10px 0 10px 20px
+
+.based_container .based_text
+  margin: 10px 0 10px 20px
+
+.based_date
+  margin: 0
+  font-size: 18px
+  line-height: 2.2
+
+@import './media/Global.media.sass'

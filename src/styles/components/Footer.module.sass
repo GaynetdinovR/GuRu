@@ -1,0 +1,63 @@
+@import "../mixins"
+@import "../variables"
+
+.footer
+  background-color: $light_black
+  margin-top: 20px
+  border-radius: 20px
+  box-sizing: border-box
+  padding: 40px 120px
+
+  @include flex($jc: center, $ai: center, $d: column)
+
+  &__contacts,
+  &__links
+    @include flex($jc: center, $ai: center)
+
+  &__links
+    margin-top: 40px
+    &_item:last-child
+      margin-right: 0
+    &_item
+      margin-right: 20px
+    &_link
+      @include font($s: 15px, $c: $light_gray, $w: 600)
+      @include link_hover()
+
+  &__contacts
+    &_item
+      margin-right: 30px
+
+    &_item:last-child
+      margin-right: 0
+
+    &_link
+      box-sizing: border-box
+      padding: 15px
+      border-radius: 50%
+      background-color: $gray_2
+      @include flex($jc: center, $ai: center)
+      @include img(50px)
+      @include btn_hover()
+
+  &__phone_number
+    margin-top: 20px
+    @include flex($d: column, $ai: end)
+    font-family: 'Montserrat', sans-serif
+    & div
+      font-size: 14px
+      color: $light_gray
+      margin: 0 auto 4px
+    & a
+      font-family: 'Montserrat', sans-serif
+      color: $light_gray
+      text-decoration: underline
+      font-weight: 600
+      @include link_hover()
+
+  &__copyright
+    margin-top: 40px
+    @include font($s: 14px, $c: $gray, $w: 600)
+
+
+@import '../media/Footer.media.sass'
