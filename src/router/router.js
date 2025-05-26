@@ -4,7 +4,6 @@ import Template from "../ui/Template.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import UserAgreementPage from "./pages/UserAgreementPage";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
-import Error404Page from "./pages/Error404Page";
 
 const router = createBrowserRouter([
     {
@@ -31,14 +30,6 @@ const router = createBrowserRouter([
             </Template>
         )
     },
-    {
-        path: "/error404",
-        element: (
-            <Template>
-                <Error404Page />
-            </Template>
-        )
-    }
 ]);
 
 export default router;

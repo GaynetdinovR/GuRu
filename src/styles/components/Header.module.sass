@@ -21,18 +21,7 @@
     width: 350px
     @include flex($jc: space-between, $ai: center)
 
-  &__phone_number
-    @include flex($d: column, $ai: end)
-    & div
-      margin-bottom: 2px
-      font-size: 12px
-      color: $gray
-    & a
-      color: $black
-      text-decoration: underline
-      font-weight: 600
-      @include link_hover()
-
   &__button
+    position: relative
 
 @import '../media/Header.media.sass'

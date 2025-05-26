@@ -1,8 +1,9 @@
 import styles from '../../styles/components/Benefits.module.sass';
-import H2 from "../../ui/H2";
-import H4 from "../../ui/H4";
-import Text from "../../ui/Text";
-import H6 from "../../ui/H6";
+
+import H2 from "../../ui/H2.jsx";
+import H4 from "../../ui/H4.jsx";
+import H6 from "../../ui/H6.jsx";
+import Text from "../../ui/Text.jsx";
 
 const Benefits = () => {
     const benefits = [

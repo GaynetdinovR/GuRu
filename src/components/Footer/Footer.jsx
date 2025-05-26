@@ -1,6 +1,8 @@
 import styles from '../../styles/components/Footer.module.sass';
-import {Link, useLocation} from 'react-router-dom';
-import {beSoonNotif} from "../../scripts/notifications";
+import { Link, useLocation } from 'react-router-dom';
+
+import { beSoonNotif } from "../../scripts/notifications.js";
+import PhoneNumber from "../PhoneNumber/PhoneNumber";
 
 const Footer = () => {
     const contacts = [
@@ -17,14 +19,12 @@ const Footer = () => {
 
     const path = useLocation().pathname;
 
-    console.log(path);
-
     return (
         <footer className={styles.footer}>
             <ul className={styles.footer__contacts}>
                 {contacts.map(obj => {
                     const link = obj.href ?
-                        (<a href={obj.href} className={styles.footer__contacts_link}>
+                        (<a href={obj.href} target='_blank' className={styles.footer__contacts_link}>
                             <img src={obj.src} alt={obj.alt}/>
                         </a>) : (<a onClick={beSoonNotif} className={styles.footer__contacts_link}>
                             <img src={obj.src} alt={obj.alt}/>
@@ -48,12 +48,7 @@ const Footer = () => {
                 })}
             </ul>
 
-            {
-                window.innerWidth < 768 ? (<div className={styles.footer__phone_number}>
-                    <div>По всем вопросам:</div>
-                    <a href="tel:89907703322">+7 990 770-33-22</a>
-                </div>) : (<></>)
-            }
+            { (window.innerWidth <= 768) ? (<PhoneNumber/>) : null }
 
             <span className={styles.footer__copyright}>GuRu | RuEGE © 2025</span>
         </footer>

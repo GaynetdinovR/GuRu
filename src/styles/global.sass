@@ -24,14 +24,25 @@ body
     display: flex
     flex-direction: column
 
+.sn-notifications-container
+  box-sizing: border-box
+
+.based_phone_number
+  @include flex($d: column, $ai: end)
+
+  & div
+    margin-bottom: 2px
+    @include font($s: 13px, $c: $gray)
+
+  & a
+    text-decoration: underline
+    @include font($s: 18px, $c: $black, $w: 600)
+
+    @include link_hover()
+
 .based_notification
   width: 400px
   @include font()
-
-//! КОСТЫЛЬ
-.sn-notifications-container
-  box-sizing: border-box
-//!!
 
 .based_container
   font-family: 'Montserrat', sans-serif
@@ -55,6 +66,11 @@ body
 .based_list
   list-style-type: disc
   padding-left: 20px
+
+.based_list_without_style
+  padding-left: 20px
+  & li
+    margin: 5px 0
 
 .based_list li
   margin: 10px 0 10px 20px
